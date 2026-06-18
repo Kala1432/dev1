@@ -1,0 +1,19 @@
+cd ~
+
+gedit /home/student/t.jar
+
+ls -l /home/student/t.jar
+
+gedit hosts.ini
+
+gedit deploy.yml
+
+mvn clean package
+
+mvn test
+
+ls target
+
+sudo systemctl start jenkins
+
+sudo systemctl status jenkins
