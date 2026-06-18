@@ -1,0 +1,25 @@
+cd Documents
+
+gedit hosts.ini
+
+ansible all -i hosts.ini --list-hosts
+
+ansible all -i hosts.ini -m ping
+
+gedit firstpb.yml
+
+ansible-playbook -i hosts.ini firstpb.yml
+
+mkdir -p library
+
+cd library
+
+gedit firstmodule.py
+
+cd ..
+
+chmod +x library/firstmodule.py
+
+gedit secondpb.yml
+
+ansible-playbook -i hosts.ini secondpb.yml
